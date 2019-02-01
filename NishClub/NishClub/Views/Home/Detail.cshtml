@@ -1,0 +1,17 @@
+﻿@model NishClub.Models.DetailListModel
+@{
+    ViewBag.Title = "Detail";
+}
+<br /><br /><br />
+<h2>@Model.Member.FirstName Detayı</h2>
+
+@Model.Member.CardNo kart numaralı müşterinin @Model.Order.Count adet siparişi vardır.
+
+<br />
+u siparişlerden toplam @Model.OrderBasket.Count adet ürün alınmıştır.
+<br />
+
+@{  
+    var toplam = Model.OrderBasket.Sum(s => s.Price) * Model.OrderBasket.Sum(S => S.Quantity);
+}
+@toplam parasını aldık.

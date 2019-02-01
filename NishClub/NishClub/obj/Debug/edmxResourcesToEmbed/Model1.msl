@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NishClubDBModelStoreContainer" CdmEntityContainer="NishClubDBEntities">
+    <EntitySetMapping Name="tbl_Members">
+      <EntityTypeMapping TypeName="NishClubDBModel.tbl_Members">
+        <MappingFragment StoreEntitySet="tbl_Members">
+          <ScalarProperty Name="CardNo" ColumnName="CardNo" />
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Gsm" ColumnName="Gsm" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="ISACTIVE" ColumnName="ISACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_OrderBaskets">
+      <EntityTypeMapping TypeName="NishClubDBModel.tbl_OrderBaskets">
+        <MappingFragment StoreEntitySet="tbl_OrderBaskets">
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="OrderBasketID" ColumnName="OrderBasketID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+          <ScalarProperty Name="ISACTIVE" ColumnName="ISACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Orders">
+      <EntityTypeMapping TypeName="NishClubDBModel.tbl_Orders">
+        <MappingFragment StoreEntitySet="tbl_Orders">
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+          <ScalarProperty Name="Prefix" ColumnName="Prefix" />
+          <ScalarProperty Name="Credate" ColumnName="Credate" />
+          <ScalarProperty Name="ISACTIVE" ColumnName="ISACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

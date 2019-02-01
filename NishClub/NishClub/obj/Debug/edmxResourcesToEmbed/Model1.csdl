@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NishClubDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tbl_Members">
+    <Key>
+      <PropertyRef Name="MemberID" />
+    </Key>
+    <Property Name="MemberID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Gsm" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ISACTIVE" Type="Boolean" />
+    <Property Name="CardNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbl_OrderBaskets">
+    <Key>
+      <PropertyRef Name="OrderBasketID" />
+    </Key>
+    <Property Name="OrderBasketID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderID" Type="Int32" Nullable="false" />
+    <Property Name="MemberID" Type="Int32" Nullable="false" />
+    <Property Name="ISACTIVE" Type="Boolean" />
+    <Property Name="Price" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Quantity" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tbl_Orders">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MemberID" Type="Int32" Nullable="false" />
+    <Property Name="Prefix" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Credate" Type="DateTime" Precision="0" />
+    <Property Name="ISACTIVE" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="NishClubDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbl_Members" EntityType="Self.tbl_Members" />
+    <EntitySet Name="tbl_OrderBaskets" EntityType="Self.tbl_OrderBaskets" />
+    <EntitySet Name="tbl_Orders" EntityType="Self.tbl_Orders" />
+  </EntityContainer>
+</Schema>
