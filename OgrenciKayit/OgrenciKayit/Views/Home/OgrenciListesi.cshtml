@@ -1,0 +1,48 @@
+﻿@model  List<OgrenciKayit.Models.Ogrenci>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>OgrenciListesi</title>
+
+</head>
+<body>
+    <div> 
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Öğrenci Not Listesi</h1>
+                <div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Öğrenci Adı</th>
+                                <th>Öğrenci Soyadı</th>
+                                <th>Öğrenci Ders Adı</th>
+                                <th>Öğrenci Ders Notu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach(var ogrenci in Model)
+                            {
+                            <tr>
+                                <td>@ogrenci.Ad</td>
+                                <td>@ogrenci.Soyad</td>
+                                <td>@ogrenci.Ders</td>
+                                <td>@ogrenci.Not</td>
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

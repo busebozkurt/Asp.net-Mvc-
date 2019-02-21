@@ -1,0 +1,66 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    @using (Html.BeginForm("OgrenciKaydet", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        <div class="container">
+            <div>
+                <div class="jumbotron">
+                    <h1>Öğrenci Kayıt Sayfası</h1>
+                    <p>Tüm alanların doldurulması zorunludur!</p>
+                </div>
+            </div>
+            <div>
+                <div class="form-group row">
+                    <label class="control-label col-sm-2">Öğrenci Adı</label>
+                    <div class="col-sm-3">
+                        <input class="form-control" type="text" name="Ad" placeholder="Öğrencinin Adını Giriniz" />
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="control-label col-sm-2">Öğrenci Soyadı</label>
+                    <div class="col-sm-3">
+                        <input class="form-control" type="text" name="Soyad" placeholder="Öğrencinin Soyadını Giriniz" />
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="control-label col-sm-2">Ders Adı</label>
+                    <div class="col-sm-3">
+                        <input class="form-control" type="text" name="Ders" placeholder="Ders Adını Giriniz" />
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label class="control-label col-sm-2">Ders Notu</label>
+                    <div class="col-sm-3">
+                        <input class="form-control" type="text" name="Not" placeholder="Ders Notunu Giriniz" />
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-sm-offset-2">
+                        <button class="btn btn-success" type="submit" value="Ekle">EKLE</button>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    }
+
+</body>
+</html>
